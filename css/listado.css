@@ -1,8 +1,14 @@
-/*************************************************************************************/
-/*************************************************************************************/
-/*************************************************************************************/
+/***************************************************************************/
+/*                          Style sheet: listado.css                       */
+/*                          author: Álvaro López                           */
+/*                          version: 1.0                                   */
+/*                          comments: class proyect 2023-34                */
+/***************************************************************************/
 
-/* estilo general */
+@font-face {font-family: textonormal;
+    src: url(../font/Poppins-Regular.ttf);}
+
+/*************************** General Style ******************************/
 
 * {padding: 0;
     margin: 0;
@@ -38,7 +44,7 @@ hr {margin: 12px;}
     text-align: center;
 }
 
-/* estilo de tabla */
+/*************************** Table Style ******************************/
 
 .table {border-collapse: collapse;
     width: 100%;}
@@ -61,7 +67,7 @@ hr {margin: 12px;}
 }
 
 
-/* estilo botones */
+/*************************** Button Style ******************************/
 
 .table button {display: inline-block;
     border: none;
@@ -79,18 +85,6 @@ hr {margin: 12px;}
 .edit {background-color: #ff9800;
     color: white;} /* Orange */
 .edit:hover {background: #e68a00};
-
-.success {background-color: #04AA6D;} /* Green */
-.success:hover {background-color: #46a049;}
-
-info {background-color: #2196F3;} /* Blue */
-.info:hover {background: #0b7dda;}
-
-.warning {background-color: #ff9800;} /* Orange */
-.warning:hover {background: #e68a00;}
-
-.danger {background-color: #f44336;} /* Red */ 
-.danger:hover {background: #da190b;}
 
 .default {background-color: #e7e7e7; color: black;} /* Gray */ 
 .default:hover {background: #ddd;}

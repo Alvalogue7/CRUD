@@ -1,7 +1,20 @@
+/***************************************************************************/
+/*                          Style sheet: insercion.css                     */
+/*                          author: Álvaro López                           */
+/*                          version: 1.0                                   */
+/*                          comments: class proyect 2023-34                */
+/***************************************************************************/
+
+@font-face {font-family: textonormal;
+  src: url(../font/Poppins-Regular.ttf);}
+
+/*************************** General Style ******************************/
+
 * {padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'poppins', sans-serif;}
+  font-family: textonormal;
+}
 
 body {
     background-image: url(../img/nueva.jpg) ; 
@@ -13,12 +26,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
   }
 
 .container {
     width: 60%;
     margin: 2%;
+    height: auto;
     max-width: 1440px; 
     background: transparent;
     backdrop-filter: blur(17px);
@@ -26,87 +39,87 @@ body {
     border-radius: 10px;
 }
   
-  h1, p {
-    margin: 1em auto;
-    text-align: center;
-  }
-  
-  form {
-    width: 60vw;
-    max-width: 500px;
-    min-width: 300px;
-    margin: 0 auto;
-    padding-bottom: 2em;
-  }
-  
-  fieldset {
-    border: none;
-    padding: 2rem 0;
-    border-bottom: 3px solid #3b3b4f;
-  }
-  
-  fieldset:last-of-type {
-    border-bottom: none;
-  }
-  
-  label {
-    display: block;
-    margin: 0.5rem 0;
-  }
-  
-  input,
-  textarea,
-  select {
-    margin: 10px 0 0 0;
-    width: 100%;
-    min-height: 2em;
-  }
-  
-  input, textarea {
-    background-color: #e7e7ef;
-    border: 1px solid #e7e7ef;
-    color: #000000;
-  }
-  
-  .inline {
-    width: unset;
-    margin: 0 0.5em 0 0;
-    vertical-align: middle;
-  }
-  
-  input[type="submit"] {
-    display: block;
-    width: 60%;
-    margin: 1em auto;
-    height: 2em;
-    font-size: 1.1rem;
-    background-color: #c6c3c3;
-    min-width: 300px;
-    border-radius: 7px;
-    font-weight: bold;
-  }
-  
-  input[type="file"] {
-    padding: 1px 2px;
-  }
-  input[type="date"] {
-    padding: 2px 2px;
-  }
-  
-  .inline{
-    display: inline; 
-  }
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input, textarea {
+  background-color: #e7e7ef;
+  border: 1px solid #e7e7ef;
+  color: #000000;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #c6c3c3;
+  min-width: 300px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+input[type="date"] {
+  padding: 2px 2px;
+}
+
+.inline{
+  display: inline; 
+}
 
 a {color: #c6c3c3;}
 
+/***************************************************************************/
+/*                                 RESPONSIVE                              */
+/***************************************************************************/
 
-  @media only screen and (max-width: 850px){
-    .container {width: 100%;
-    text-align: left;
-    padding-left: 1.2rem} 
-    }
-  @media only screen and (max-width: 1050px){
-    .container {width: 80%;
-    text-align: left;
-    padding-left: 1.2rem} 
-    }
+@media only screen and (max-width: 850px){
+  .container {width: 100%;} 
+  }
+
+@media only screen and (max-width: 1050px){
+  .container {width: 100%;} 
+  }
