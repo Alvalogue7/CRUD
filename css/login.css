@@ -44,6 +44,12 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+.warning {color: red;
+    visibility: hidden;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 9px 0;}
+
 /*************************** Login Style ******************************/
 
 .login-box {
@@ -74,7 +80,7 @@ a:hover {
     color: var(--black-color);
 }
 .login-header::before {
-    content: "";
+    /* content: ""; */
     position: absolute;
     top: 0;
     left: -30px;
@@ -85,7 +91,7 @@ a:hover {
     box-shadow: 15px 0 0 0 var(--primary-color);
 }
 .login-header::after {
-    content: "";
+    /* content: ""; */
     position: absolute;
     top: 0;
     right: -30px;
@@ -112,9 +118,9 @@ a:hover {
     border-radius: 30px;
     outline: none;
 }
-#user {
+/* #user {
     margin-bottom: 10px;
-}
+} */
 .label {
     position: absolute;
     top: -28px;

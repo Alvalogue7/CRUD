@@ -11,20 +11,45 @@
     <div class="container">
         <h1>Registration Form</h1>
         <p>Please fill out this form with the required information</p>
-        <form method="post" action='https://register-demo.freecodecamp.org'>
-            <fieldset>
-                <label for="first-name">Enter Your Name: <input id="first-name" name="first-name" type="text" required /></label>
-                <label for="last-name">Enter your DNI/NIF <input id="last-name" name="last-name" type="text" required /></label>
-                <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
-                <label for="email">Entry Date <input id="email" name="email" type="date" required /></label>
-            </fieldset>
+        <form action='' onsubmit="return validation(event)" method="post">
             
-            <fieldset>
-                <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
-                <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
-                <label for="referrer">Which department do you belong to?
-                <select id="referrer" name="referrer">
-                    <option value="">(select one)</option>
+                <label for="name">Enter Your Name: <span class="asterisco">*</span>
+                    <input onchange="resetear('name')" id="name" name="name" type="text" aria-describedby="nameHelp"/>
+                </label>
+                <div id="nameHelp" class="warning">Please enter a valid name</div>
+
+                <label for="lastName">Enter Your LastName: <span class="asterisco">*</span>
+                    <input onchange="resetear('lastName')" id="lastName" name="lastName" type="text" aria-describedby="lastNameHelp"/>
+                </label>
+                <div id="lastNameHelp" class="warning">Please enter a valid lastname</div>
+
+                <label for="dni">Enter your DNI/NIF: <span class="asterisco">*</span>
+                    <input onchange="resetear('dni')" id="dni" name="dni" type="text"/>
+                </label>
+                <div id="dniHelp" class="warning">Please enter a valid DNI/NIF</div>
+
+                <label for="email">Enter Your Email: <span class="asterisco">*</span>
+                    <input onchange="resetear('email')" id="email" name="email" type="email"/>
+                </label>
+                <div id="emailHelp" class="warning">Please enter a valid email</div>
+
+                <label for="age">Input your age (years): <span class="asterisco">*</span>
+                    <input onchange="resetear('age')" id="age" type="text" name="age"/>
+                </label>
+                <div id="ageHelp" class="warning">Please enter a valid age [18-75]</div>
+
+                <legend>Schedule: <span class="asterisco">*</span></legend>
+                <label for="morning">
+                    <input onchange="resetear('horario')" id="morning" type="radio" name="horario" class="inline"/> Morning
+                </label>
+                <label for="afternoon">
+                    <input onchange="resetear('horario')" id="afternoon" type="radio" name="horario" class="inline"/> Afternoon 
+                </label>
+                <div id="horarioHelp" class="warning">Please select one option</div>
+                
+                <label for="department">Which department do you belong to? <span class="asterisco">*</span>
+                <select onchange="resetear('department')" id="department" name="department">
+                    <option value="0">(select one)</option>
                     <option value="1">Accounting</option>
                     <option value="2">Gardening</option>
                     <option value="3">Medical Services</option>
@@ -34,15 +59,23 @@
                     <option value="7">Other</option>
                 </select>
                 </label>
+                <div id="departmentHelp" class="warning">Please select one department</div>
+
                 <label for="bio">Provide a bio:
-                <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like this club..."></textarea>
+                <textarea id="bio" name="bio" rows="3" cols="30" placeholder="(Optional...)"></textarea>
                 </label>
-            </fieldset>
-            <label for="terms-and-conditions">
-                <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+                <div id="bioHelp" class="warning">Please enter a valid username</div>
+
+            <label for="terms">
+                <input onchange="resetear('terms')" class="inline" id="terms" type="checkbox" name="terms" /> I accept the <a href="">terms and conditions</a>
             </label>
+            <div id="termsHelp" class="warning">Please accept ther terms and conditions</div>
+
             <input type="submit" value="Submit" />
         </form>
     </div>
+
+    <script src="./js/insercion.js"></script>
+
 </body>
 </html>

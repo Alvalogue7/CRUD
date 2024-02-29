@@ -52,16 +52,6 @@ form {
   padding-bottom: 2em;
 }
 
-fieldset {
-  border: none;
-  padding: 2rem 0;
-  border-bottom: 3px solid #3b3b4f;
-}
-
-fieldset:last-of-type {
-  border-bottom: none;
-}
-
 label {
   display: block;
   margin: 0.5rem 0;
@@ -79,6 +69,7 @@ input, textarea {
   background-color: #e7e7ef;
   border: 1px solid #e7e7ef;
   color: #000000;
+  padding: 2px;
 }
 
 .inline {
@@ -111,6 +102,12 @@ input[type="date"] {
 }
 
 a {color: #c6c3c3;}
+
+.asterisco {color: red;}
+
+.warning {color: red;
+  visibility: hidden;
+  font-size: 0.8em;}
 
 /***************************************************************************/
 /*                                 RESPONSIVE                              */

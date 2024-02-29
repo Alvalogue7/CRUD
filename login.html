@@ -16,17 +16,23 @@
             <div class="login-header">
                 <span>Login</span>
             </div>
-            <form action="" target="_blank" method="post">
+            <form action="https://alvalogue7.github.io/CRUD/listado.html" onsubmit="return validation(event)" method="post">
                 <div class="input-box">
-                    <input type="text" id="user" class="input-field" required>
+                    <input onchange="resetear('user')" type="text" id="user" name="user" class="input-field" aria-describedby="userHelp">
                     <label for="user" class="label">Username
                     </label>
+                    
                     <i class="bx bx-user icon"></i>
+                    <div id="userHelp" class="warning">Please enter a valid username</div>
+                    
                 </div>
                 <div class="input-box">
-                    <input type="password" id="pass" class="input-field" autocomplete="off">
-                    <label for="pass" class="label">Password</label>
-                    <i class="bx bx-lock-alt icon" id="show-password"></i>
+                    <input onchange="resetear('password')" type="password" id="password" name="password" class="input-field" autocomplete="off" aria-describedby="passwordHelp">
+                    <label for="password" class="label">Password</label>
+                    
+                    <i class="bx bx-lock-alt icon"></i>
+                    <div id="passwordHelp" class="warning">Please enter a valid password</div>
+                    
                 </div>
                 <div class="remember-forgot">
                     <div class="remember-me">
@@ -34,14 +40,17 @@
                         <label for="remember">Remember me</label>
                     </div>
                     <div class="forgot">
-                        <a href="#">Forgot password</a>
+                        <a href="">Forgot password</a>
                     </div>
                 </div>
                 <div class="input-box">
-                    <input type="submit" class="input-submit" value="Login">
+                    <input type="submit" id="submit" class="input-submit" value="Login">
                 </div>
             </form>
         </div>
     </div>
+
+    <script src="./js/login.js"></script>
+
 </body>
 </html>
