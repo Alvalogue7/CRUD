@@ -38,15 +38,16 @@
                 </label>
                 <div id="ageHelp" class="warning">Please enter a valid age [18-75]</div>
 
-                <legend>Schedule: <span class="asterisco">*</span></legend>
-                <label for="morning">
-                    <input onchange="resetear('horario')" id="morning" type="radio" name="horario" class="inline" checked/> Morning
-                </label>
-                <label for="afternoon">
-                    <input onchange="resetear('horario')" id="afternoon" type="radio" name="horario" class="inline"/> Afternoon 
-                </label>
-                <div id="horarioHelp" class="warning">Please select one option</div>
-                
+                <fieldset>
+                    <legend>Schedule: <span class="asterisco">*</span></legend>
+                    <label for="morning">
+                        <input onchange="resetear('horario')" id="morning" type="radio" name="horario" class="inline" checked/> Morning
+                    </label>
+                    <label for="afternoon">
+                        <input onchange="resetear('horario')" id="afternoon" type="radio" name="horario" class="inline"/> Afternoon 
+                    </label>
+                    <div id="horarioHelp" class="warning">Please select one option</div>
+                </fieldset>
                 <label for="department">Which department do you belong to? <span class="asterisco">*</span>
                 <select onchange="resetear('department')" id="department" name="department">
                     <option value="0">(select one)</option>
@@ -64,7 +65,7 @@
                 <label for="bio">Provide a bio:
                 <textarea id="bio" name="bio" rows="3" cols="30" placeholder="(Optional...)"></textarea>
                 </label>
-                <div id="bioHelp" class="warning">Please enter a valid username</div>
+                <div id="bioHelp" class="warning"></div>
 
             <label for="terms">
                 <input onchange="resetear('terms')" class="inline" id="terms" type="checkbox" name="terms" checked/> I accept the <a href="">terms and conditions</a>

@@ -52,6 +52,10 @@ form {
   padding-bottom: 2em;
 }
 
+fieldset {
+  border: none;
+}
+
 label {
   display: block;
   margin: 0.5rem 0;

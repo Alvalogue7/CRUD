@@ -80,13 +80,15 @@ hr {margin: 12px;}
 
 .delete {background-color: #f44336;
     color: white;} /* Red */ 
+
 .delete:hover {background: #da190b;}
 
 .edit {background-color: #ff9800;
     color: white;} /* Orange */
-.edit:hover {background: #e68a00};
+.edit:hover {background: #e68a00;}
 
-.default {background-color: #e7e7e7; color: black;} /* Gray */ 
+.default {background-color: #e7e7e7; 
+    color: black;} /* Gray */ 
 .default:hover {background: #ddd;}
 
 
