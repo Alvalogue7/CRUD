@@ -111,7 +111,11 @@ a {color: #c6c3c3;}
 
 .warning {color: red;
   visibility: hidden;
-  font-size: 0.8em;}
+  font-size: 0.8em;
+  font-weight: bold;
+  background: white;
+  opacity: 0.5;
+  padding: 1%;}
 
 /***************************************************************************/
 /*                                 RESPONSIVE                              */
